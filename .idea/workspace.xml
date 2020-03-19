@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="930bcbab-2f45-4b97-b0f9-e0a469c80197" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/entities/Seller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/DepartmentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/SellerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entities/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/entities/Department.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +15,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
