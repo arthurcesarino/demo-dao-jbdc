@@ -23,13 +23,19 @@ public class Program {
         List<Seller> sellerByDepartment = sellerDao.findByDepartment(department);
         sellerByDepartment.forEach(System.out::println);
 
-        System.out.println("=== TESTE 2: findByDepartment ===");
+        System.out.println("=== TESTE 3: findByDepartment ===");
         sellerByDepartment = sellerDao.findAll();
         sellerByDepartment.forEach(System.out::println);
 
-        System.out.println("=== TESTE 2: insert ===");
+        System.out.println("=== TESTE 4: insert ===");
         Seller seller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.00, department);
         sellerDao.insert(seller);
         System.out.println("Inserted! New Id: " + seller.getId());
+
+        System.out.println("=== TESTE 5: update ===");
+        seller = sellerDao.findById(1);
+        seller.setName("Martha Waine");
+        sellerDao.update(seller);
+        System.out.println("Updated completed!");
     }
 }
