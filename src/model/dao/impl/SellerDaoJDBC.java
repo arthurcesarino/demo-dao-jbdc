@@ -6,6 +6,7 @@ import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -39,7 +40,6 @@ public class SellerDaoJDBC implements SellerDao {
     public Seller findById(Integer id) {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
-
         try{
             statement = connection.prepareStatement(
                     "SELECT seller.*,department.Name as DepName "
@@ -50,14 +50,8 @@ public class SellerDaoJDBC implements SellerDao {
             statement.setInt(1, id);
             resultSet = statement.executeQuery();
             if (resultSet.next()){
-                Department department = new Department(resultSet.getInt("DepartmentId"),
-                        resultSet.getString("DepName"));
-                Seller seller = new Seller(resultSet.getInt("Id"),
-                        resultSet.getString("Name"),
-                        resultSet.getString("Email"),
-                        resultSet.getDate("BirthDate"),
-                        resultSet.getDouble("BaseSalary"),
-                        department);
+               Department department = instantiateDepartment(resultSet);
+               Seller seller = instantiateSeller(resultSet, department);
                 return seller;
             }
             return null;
@@ -67,7 +61,22 @@ public class SellerDaoJDBC implements SellerDao {
             DB.closeStatement(statement);
             DB.closeResultSet(resultSet);
         }
+    }
 
+    private Seller instantiateSeller(ResultSet resultSet, Department department) throws SQLException {
+        Seller seller = new Seller(resultSet.getInt("Id"),
+                resultSet.getString("Name"),
+                resultSet.getString("Email"),
+                resultSet.getDate("BirthDate"),
+                resultSet.getDouble("BaseSalary"),
+                department);
+        return  seller;
+    }
+
+    private Department instantiateDepartment(ResultSet resultSet) throws SQLException {
+        Department department = new Department(resultSet.getInt("DepartmentId"),
+                resultSet.getString("DepName"));
+        return department;
     }
 
     @Override
