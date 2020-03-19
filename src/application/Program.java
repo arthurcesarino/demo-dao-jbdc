@@ -26,5 +26,10 @@ public class Program {
         System.out.println("=== TESTE 2: findByDepartment ===");
         sellerByDepartment = sellerDao.findAll();
         sellerByDepartment.forEach(System.out::println);
+
+        System.out.println("=== TESTE 2: insert ===");
+        Seller seller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.00, department);
+        sellerDao.insert(seller);
+        System.out.println("Inserted! New Id: " + seller.getId());
     }
 }
