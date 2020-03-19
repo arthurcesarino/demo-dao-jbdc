@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="930bcbab-2f45-4b97-b0f9-e0a469c80197" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/Program2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/dao/impl/DepartmentDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/DaoFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,7 @@
       <recent name="C:\Users\Arty\Documents\projetos\demo-dao-jdbc\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Program2">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.Program" />
       <module name="demo-dao-jdbc" />
@@ -55,8 +58,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Program2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.Program2" />
+      <module name="demo-dao-jdbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Program2" />
         <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>
@@ -79,30 +96,30 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2102" y="362" key="#Project_Structure/0.0.3440.1400@0.0.3440.1400" timestamp="1584627156755" />
-    <state x="2315" y="419" key="#com.intellij.ide.util.MemberChooser" timestamp="1584628351290">
+    <state x="2315" y="419" key="#com.intellij.ide.util.MemberChooser" timestamp="1584651912794">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="2315" y="419" key="#com.intellij.ide.util.MemberChooser/0.0.3440.1400@0.0.3440.1400" timestamp="1584628351290" />
+    <state x="2315" y="419" key="#com.intellij.ide.util.MemberChooser/0.0.3440.1400@0.0.3440.1400" timestamp="1584651912794" />
     <state x="2216" y="445" key="FileChooserDialogImpl" timestamp="1584627008768">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2216" y="445" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1584627008768" />
-    <state width="1802" height="398" key="GridCell.Tab.0.bottom" timestamp="1584640495295">
+    <state width="1802" height="398" key="GridCell.Tab.0.bottom" timestamp="1584652730756">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1802" height="398" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1584640495295" />
-    <state width="1802" height="398" key="GridCell.Tab.0.center" timestamp="1584640495295">
+    <state width="1802" height="398" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1584652730756" />
+    <state width="1802" height="398" key="GridCell.Tab.0.center" timestamp="1584652730756">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1802" height="398" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1584640495295" />
-    <state width="1802" height="398" key="GridCell.Tab.0.left" timestamp="1584640495295">
+    <state width="1802" height="398" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1584652730756" />
+    <state width="1802" height="398" key="GridCell.Tab.0.left" timestamp="1584652730756">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1802" height="398" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1584640495295" />
-    <state width="1802" height="398" key="GridCell.Tab.0.right" timestamp="1584640495295">
+    <state width="1802" height="398" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1584652730756" />
+    <state width="1802" height="398" key="GridCell.Tab.0.right" timestamp="1584652730756">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1802" height="398" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1584640495295" />
+    <state width="1802" height="398" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1584652730756" />
     <state x="1990" y="278" key="SettingsEditor" timestamp="1584627012344">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
