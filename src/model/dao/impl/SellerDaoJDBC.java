@@ -1,5 +1,6 @@
 package model.dao.impl;
 
+import com.sun.xml.internal.bind.v2.model.core.ID;
 import db.DB;
 import db.DbException;
 import model.dao.SellerDao;
@@ -82,7 +83,16 @@ public class SellerDaoJDBC implements SellerDao {
 
     @Override
     public void deleteById(Integer id) {
-
+        PreparedStatement statement = null;
+        try{
+            statement = connection.prepareStatement("DELETE FROM seller WHERE Id = ?");
+            statement.setInt(1, id);
+            statement.executeUpdate();
+        } catch (SQLException e){
+            throw new DbException(e.getMessage());
+        } finally {
+            DB.closeStatement(statement);
+        }
     }
 
     @Override
