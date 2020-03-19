@@ -24,5 +24,10 @@ public class Program2 {
         System.out.println("=== TESTE 3: Insert ===");
         departmentDao.insert(new Department(null, "DVD"));
         System.out.println("insert feito com sucesso");
+
+        System.out.println("=== TESTE 4: update ===");
+        Department department1 = new Department(9, "Rola");
+        departmentDao.update(department1);
+        System.out.println("Update completo");
     }
 }

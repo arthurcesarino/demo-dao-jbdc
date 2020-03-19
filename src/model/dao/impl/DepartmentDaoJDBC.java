@@ -11,7 +11,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DepartmentDaoJDBC implements DepartmentDao {
 
@@ -46,7 +48,23 @@ public class DepartmentDaoJDBC implements DepartmentDao {
 
     @Override
     public void update(Department department) {
-
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement(
+                    "UPDATE department "
+                    + "SET Name=? "
+                    + "WHERE Id=?");
+            statement.setString(1, department.getName());
+            statement.setInt(2, department.getId());
+            int rowsAffected = statement.executeUpdate();
+            if (rowsAffected == 0){
+                throw new DbException("No rows affected");
+            }
+        } catch (SQLException e){
+            throw new DbException(e.getMessage());
+        } finally {
+            DB.closeStatement(statement);
+        }
     }
 
     @Override
@@ -86,7 +104,10 @@ public class DepartmentDaoJDBC implements DepartmentDao {
             statement = connection.prepareStatement("SELECT * FROM department");
             resultSet = statement.executeQuery();
             while (resultSet.next()){
-                departmentList.add(new Department(resultSet.getInt("Id"), resultSet.getString("Name")));
+                Department dep = new Department(resultSet.getInt("id"), resultSet.getString("Name"));
+                if (!departmentList.contains(dep)){
+                    departmentList.add(dep);
+                }
             }
             return departmentList;
         } catch (SQLException e){
