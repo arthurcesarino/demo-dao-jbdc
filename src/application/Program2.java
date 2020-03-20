@@ -29,5 +29,9 @@ public class Program2 {
         Department department1 = new Department(9, "Rola");
         departmentDao.update(department1);
         System.out.println("Update completo");
+
+        System.out.println("=== TESTE 5: delete ===");
+        departmentDao.deleteById(9);
+        System.out.println("delete completo");
     }
 }
